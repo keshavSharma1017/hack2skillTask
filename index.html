@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antariksh Hackathon 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          transitionProperty: {
+            'width': 'width'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="m-0 p-0 font-sans text-white overflow-x-hidden">
+
+  <section class="relative w-full h-screen">
+
+    <!-- Sticky Navbar -->
+    <div class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4">
+
+      <!-- Hamburger Icon (Mobile only) -->
+      <div class="md:hidden z-50">
+        <button id="hamburgerBtn" class="text-white focus:outline-none">
+          <svg id="hamburgerOpenIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="hamburgerCloseIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Full Navbar (Desktop only) -->
+      <nav class="hidden md:flex justify-center w-full">
+        <div class="bg-white text-black px-6 py-2 rounded-full shadow-lg flex flex-wrap gap-4 items-center max-w-[90%] lg:max-w-[70%]">
+          <a href="#" class="hover:text-blue-500 font-medium">About</a>
+          <a href="#" class="hover:text-blue-500 font-medium">Why Participate?</a>
+          <a href="#" class="hover:text-blue-500 font-medium">Challenges</a>
+          <a href="#" class="hover:text-blue-500 font-medium">Schedules</a>
+          <a href="#" class="hover:text-blue-500 font-medium">Rewards</a>
+          <a href="#" class="hover:text-blue-500 font-medium">FAQs</a>
+          <button class="bg-black text-white px-4 py-1 rounded-full font-semibold whitespace-nowrap">Registration Closed</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Slide-In Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 h-full w-[100%] bg-black transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col items-start px-10 py-20 z-40">
+      <nav class="text-white text-xl space-y-6 mx-auto w-full text-center">
+        <a href="#" class="block hover:text-blue-500">About</a>
+        <a href="#" class="block hover:text-blue-500">Why Participate?</a>
+        <a href="#" class="block hover:text-blue-500">Challenges</a>
+        <a href="#" class="block hover:text-blue-500">Schedules</a>
+        <a href="#" class="block hover:text-blue-500">Rewards</a>
+        <a href="#" class="block hover:text-blue-500">FAQs</a>
+        <button class="mt-6 bg-white text-black px-6 py-2 rounded-full font-bold">Registration Closed</button>
+      </nav>
+    </div>
+
+    <!-- Video Background -->
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+      <source src="https://h2svision.github.io/publicAssets/bah2025/hero-video-deskop.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+        <img src="https://h2svision.github.io/publicAssets/bah2025/main_title.png" alt="Hackathon Title">
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl">
+        Organised by <br />
+        <span class="font-bold text-white">INDIAN SPACE RESEARCH ORGANISATION (ISRO)</span>
+      </p>
+
+      <button class="mt-6 px-6 py-3 bg-gradient-to-r from-orange-500 to-green-600 text-white rounded border border-white">
+        Registration Closed
+      </button>
+    </div>
+    
+  </section>
+<!-- Info Section (Based on Provided Image) -->
+<section class="relative bg-black text-white py-20 px-6">
+  <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+    
+    <!-- Left Checkerboard Pattern -->
+    <div class="hidden md:flex flex-col space-y-2">
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+      </div>
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+      </div>
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="text-center md:max-w-3xl px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">Bhartiya Antariksh Hackathon 2025</h2>
+      <p class="text-lg md:text-xl mb-6">
+        Welcome to the Bhartiya Antariksh Hackathon 2025 — a nationwide innovation challenge organised by the Indian Space Research Organisation (ISRO) with Hack2skill as the innovation partner.
+      </p>
+      <p class="text-lg md:text-xl mb-6">
+        We are calling upon undergraduates, graduates, postgraduates, and PhD scholars from across India to bring their creativity, passion, and problem-solving skills to address real-world challenges inspired by India’s bold space exploration programs.
+      </p>
+      <p class="text-lg md:text-xl mb-8">
+        This is more than just a hackathon — it’s a mission. A mission where you collaborate with fellow innovators, receive mentorship from leading experts, and build solutions that could contribute to India’s space future.
+      </p>
+      <button class="bg-orange-500 text-white font-semibold px-8 py-3 rounded-full cursor-not-allowed">
+        Registration Closed
+      </button>
+    </div>
+
+    <!-- Right Checkerboard Pattern -->
+    <div class="hidden md:flex flex-col space-y-2">
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+      </div>
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+      </div>
+      <div class="flex space-x-2">
+        <div class="w-6 h-6 bg-orange-500"></div>
+        <div class="w-6 h-6 bg-black"></div>
+        <div class="w-6 h-6 bg-orange-500"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Who Can Participate Section -->
+<section class="bg-black text-white py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-semibold mb-12">
+      <span class="text-orange-500 font-bold">WHO CAN PARTICIPATE?</span>
+    </h2>
+
+    <!-- Participant Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
+        <p class="text-lg font-medium">Undergraduate<br>Students</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
+        <p class="text-lg font-medium">Graduate/<br>Postgraduate Students</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
+        <p class="text-lg font-medium">PhD Students/<br>Research Scholars</p>
+      </div>
+
+    </div>
+
+   
+    <p class="text-base text-gray-300">
+      <span class="text-white font-medium">Note:</span> Working Professionals are not eligible to participate in hackathon
+    </p>
+  </div>
+</section>
+
+<section class="bg-black text-white px-6 py-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <!-- Right Side: Text + Countdown + Button -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        What is the <br /> Bharatiya Antariksh Hackathon?
+      </h2>
+      <p class="text-lg mb-4">
+        The Bharatiya Antariksh Hackathon 2025 is where bold ideas meet real-world space challenges.
+      </p>
+      <p class="text-lg mb-4">
+        As India accelerates its journey in space research and exploration, this hackathon invites the country’s brightest minds to step up and drive the next wave of innovation.
+      </p>
+      <p class="text-lg mb-6">
+        With problem statements directly from ISRO, participants will get the unique opportunity to apply their skills, think creatively, and build solutions that could shape the future of India’s space missions.
+      </p>
+
+      <!-- Countdown and Button -->
+      <div class="flex flex-wrap items-center gap-4 mt-8">
+        <div class="bg-[#1e1e1e] px-6 py-4 rounded-lg border border-white text-center">
+          <p class="text-sm text-gray-400 mb-1">Submission Closing In:</p>
+          <div class="text-xl font-bold tracking-widest">00d 00h 00m 00s</div>
+        </div>
+        <button class="px-6 py-4 bg-gradient-to-r from-yellow-600 to-cyan-800 text-white font-semibold rounded-lg cursor-not-allowed">
+          Registration Closed
+        </button>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <img src="https://h2svision.github.io/publicAssets/bah2025/middle-img-new.png" alt="Hackathon Visual" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="bg-black text-white py-20 px-6">
+   <div class="flex justify-center items-center min-h-screen gap-4 px-4">
+    <!-- Left Text Blocks -->
+    <div class="flex flex-col justify-between gap-16">
+      <!-- Block 1 -->
+      <div class="bg-orange-500 p-8 w-[400px] relative">
+        <h2 class="text-xl font-bold text-center">Learn from the Experts</h2>
+        <p class="text-center mt-2">Gain mentorship from ISRO scientists, researchers, and space technology experts who will guide you throughout the hackathon journey.</p>
+        <div class="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+      </div>
+      <!-- Block 2 -->
+      <div class="bg-orange-500 p-8 w-[400px] relative">
+        <h2 class="text-xl font-bold text-center">Network & Collaborate</h2>
+        <p class="text-center mt-2">Connect with fellow innovators, researchers, and leaders from academia, industry, and the space community.</p>
+        <div class="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+      </div>
+    </div>
+
+    <!-- Center Astronaut -->
+    <div class="relative z-10">
+      <img src="https://h2svision.github.io/publicAssets/bah2025/astronote.png" alt="Astronaut" class="h-[500px] object-contain" />
+    </div>
+
+    <!-- Right Text Blocks -->
+    <div class="flex flex-col justify-between gap-16">
+      <!-- Block 1 -->
+      <div class="bg-orange-500 p-8 w-[400px] relative">
+        <div class="absolute top-1/2 left-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+        <h2 class="text-xl font-bold text-center">Internship Opportunity with ISRO</h2>
+        <p class="text-center mt-2">Stand a chance to earn an exclusive internship opportunity with ISRO, where you can work alongside leading scientists and engineers on live projects.</p>
+      </div>
+      <!-- Block 2 -->
+      <div class="bg-orange-500 p-8 w-[400px] relative">
+        <div class="absolute top-1/2 left-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+        <h2 class="text-xl font-bold text-center">National-Level Recognition</h2>
+        <p class="text-center mt-2">Showcase your talent on a prestigious national platform and earn recognition that can boost your academic and professional journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    const menu = document.getElementById('mobileMenu');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const openIcon = document.getElementById('hamburgerOpenIcon');
+    const closeIcon = document.getElementById('hamburgerCloseIcon');
+
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = menu.classList.contains('-translate-x-full');
+      menu.classList.toggle('-translate-x-full');
+      openIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
