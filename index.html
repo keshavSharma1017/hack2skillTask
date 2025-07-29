@@ -16,39 +16,95 @@
       }
     }
   </script>
+  <style>
+    .about-section::before,
+.about-section::after {
+  position: absolute;
+  content: "";
+  background: url('https://h2svision.github.io/publicAssets/bah2025/about-left-img.png') no-repeat;
+  background-size: 100%;
+  width: 163px;
+  height: 201px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 0;
+}
+.about-section::after {
+  left: auto;
+  right: 0;
+  background:url("https://h2svision.github.io/publicAssets/bah2025/about-right-img.png") no-repeat;
+}
+/* Common block style */
+.info-box::before,
+.info-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 86px;
+}
+
+/* Black small block */
+.info-box::before {
+  width: 30px;
+  background: #000;
+  right: 0;
+}
+
+/* Orange long block */
+.info-box::after {
+  width: 137px;
+  background: #ff9420;
+  right: -137px;
+}
+
+.right-box .info-box::before {
+  left: 0;
+  right: auto;
+  background: #000;
+}
+
+.right-box .info-box::after {
+  left: -137px;
+  right: auto;
+  background: #ff9420;
+}
+
+
+
+  </style>
 </head>
 <body class="m-0 p-0 font-sans text-white overflow-x-hidden">
 
   <section class="relative w-full h-screen">
+<div class="fixed top-0 left-1/2 transform -translate-x-1/2 z-[1000] bg-white rounded-full flex justify-center items-center w-full max-w-max mx-auto px-8 py-6">
+  <div class="menu-toggle flex items-center">
+    <div class="hamburger cursor-pointer text-2xl">☰</div>
+    <div class="closemenu hidden text-3xl">×</div>
+  </div>
 
-    <!-- Sticky Navbar -->
-    <div class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4">
+  <nav>
+  <ul class="flex gap-6 items-center text-[16px] no-underline text-black">
+    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+    <li><a href="#why-participate" class="hover:text-blue-600">Why Participate?</a></li>
+    <li><a href="#challenges" class="hover:text-blue-600">Challenges</a></li>
+    <li><a href="#schedule" class="hover:text-blue-600">Schedules</a></li>
+    <li><a href="#rewards" class="hover:text-blue-600">Rewards</a></li>
+    <li><a href="#faqs" class="hover:text-blue-600">FAQs</a></li>
 
-      <!-- Hamburger Icon (Mobile only) -->
-      <div class="md:hidden z-50">
-        <button id="hamburgerBtn" class="text-white focus:outline-none">
-          <svg id="hamburgerOpenIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="hamburgerCloseIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+    <!-- Signin / Registration Closed Button -->
+    <li class="signin">
+      <a href="/event/bah2025/registration/"
+         class="bg-black text-white px-6 py-3 rounded-full font-medium cursor-not-allowed">
+        Registration Closed
+      </a>
+    </li>
+  </ul>
+</nav>
 
-      <!-- Full Navbar (Desktop only) -->
-      <nav class="hidden md:flex justify-center w-full">
-        <div class="bg-white text-black px-6 py-2 rounded-full shadow-lg flex flex-wrap gap-4 items-center max-w-[90%] lg:max-w-[70%]">
-          <a href="#" class="hover:text-blue-500 font-medium">About</a>
-          <a href="#" class="hover:text-blue-500 font-medium">Why Participate?</a>
-          <a href="#" class="hover:text-blue-500 font-medium">Challenges</a>
-          <a href="#" class="hover:text-blue-500 font-medium">Schedules</a>
-          <a href="#" class="hover:text-blue-500 font-medium">Rewards</a>
-          <a href="#" class="hover:text-blue-500 font-medium">FAQs</a>
-          <button class="bg-black text-white px-4 py-1 rounded-full font-semibold whitespace-nowrap">Registration Closed</button>
-        </div>
-      </nav>
-    </div>
+</div>
+
 
     <!-- Mobile Slide-In Menu -->
     <div id="mobileMenu" class="fixed top-0 left-0 h-full w-[100%] bg-black transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col items-start px-10 py-20 z-40">
@@ -73,9 +129,10 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24">
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-        <img src="https://h2svision.github.io/publicAssets/bah2025/main_title.png" alt="Hackathon Title">
+    <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-30 py-20">
+      <h1 class="text-5xl md:text-5xl font-bold leading-tight">
+         <img src="https://h2svision.github.io/publicAssets/bah2025/main_title.png"
+       class="max-w-[450px] lg:max-w-[390px] w-full h-auto block align-middle" />
       </h1>
 
       <p class="mt-8 text-lg md:text-xl">
@@ -83,69 +140,37 @@
         <span class="font-bold text-white">INDIAN SPACE RESEARCH ORGANISATION (ISRO)</span>
       </p>
 
-      <button class="mt-6 px-6 py-3 bg-gradient-to-r from-orange-500 to-green-600 text-white rounded border border-white">
-        Registration Closed
-      </button>
-    </div>
-    
+     <a href="/event/bah2025/registration/"
+   class="relative inline-block mt-10 text-white font-medium text-[18px] px-8 py-4 border-x-2 border-white"
+   style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+  
+  <span class="top-left-line absolute top-0 left-0 w-4 h-1 bg-white"></span>
+  <span class="top-right-line absolute top-0 right-0 w-4 h-1 bg-white"></span>
+  <span class="bottom-left-line absolute bottom-0 left-0 w-4 h-1 bg-white"></span>
+  <span class="bottom-right-line absolute bottom-0 right-0 w-4 h-1 bg-white"></span>
+
+  Registration Closed
+</a>
+  </div>
   </section>
 <!-- Info Section (Based on Provided Image) -->
-<section class="relative bg-black text-white py-20 px-6">
-  <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
-    
-    <!-- Left Checkerboard Pattern -->
-    <div class="hidden md:flex flex-col space-y-2">
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-      </div>
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-      </div>
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-      </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="text-center md:max-w-3xl px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8">Bhartiya Antariksh Hackathon 2025</h2>
-      <p class="text-lg md:text-xl mb-6">
+<section class="relative bg-black text-white py-20 px-6 about-section">
+  <div class="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto">
+      <div class="text-center md:max-w-3xl px-4">
+      <h2 class="text-[42px] font-semibold leading-[1.2]">Bhartiya Antariksh <br>
+        Hackathon 2025</h2>
+      <p class="text-[20px] font-light m-2">
         Welcome to the Bhartiya Antariksh Hackathon 2025 — a nationwide innovation challenge organised by the Indian Space Research Organisation (ISRO) with Hack2skill as the innovation partner.
       </p>
-      <p class="text-lg md:text-xl mb-6">
+      <p class="text-[20px] font-light m-2">
         We are calling upon undergraduates, graduates, postgraduates, and PhD scholars from across India to bring their creativity, passion, and problem-solving skills to address real-world challenges inspired by India’s bold space exploration programs.
       </p>
-      <p class="text-lg md:text-xl mb-8">
+      <p class="text-[20px] font-light m-2">
         This is more than just a hackathon — it’s a mission. A mission where you collaborate with fellow innovators, receive mentorship from leading experts, and build solutions that could contribute to India’s space future.
       </p>
-      <button class="bg-orange-500 text-white font-semibold px-8 py-3 rounded-full cursor-not-allowed">
+      <button class="bg-[#ff9420] text-white font-semibold px-8 py-3 rounded-full cursor-not-allowed m-2">
         Registration Closed
       </button>
-    </div>
-
-    <!-- Right Checkerboard Pattern -->
-    <div class="hidden md:flex flex-col space-y-2">
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-      </div>
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-      </div>
-      <div class="flex space-x-2">
-        <div class="w-6 h-6 bg-orange-500"></div>
-        <div class="w-6 h-6 bg-black"></div>
-        <div class="w-6 h-6 bg-orange-500"></div>
-      </div>
     </div>
 
   </div>
@@ -156,7 +181,7 @@
 
     <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-semibold mb-12">
-      <span class="text-orange-500 font-bold">WHO CAN PARTICIPATE?</span>
+      <span class="text-[#ff9420] ">WHO CAN PARTICIPATE?</span>
     </h2>
 
     <!-- Participant Cards -->
@@ -203,67 +228,100 @@
         With problem statements directly from ISRO, participants will get the unique opportunity to apply their skills, think creatively, and build solutions that could shape the future of India’s space missions.
       </p>
 
-      <!-- Countdown and Button -->
-      <div class="flex flex-wrap items-center gap-4 mt-8">
-        <div class="bg-[#1e1e1e] px-6 py-4 rounded-lg border border-white text-center">
-          <p class="text-sm text-gray-400 mb-1">Submission Closing In:</p>
-          <div class="text-xl font-bold tracking-widest">00d 00h 00m 00s</div>
-        </div>
-        <button class="px-6 py-4 bg-gradient-to-r from-yellow-600 to-cyan-800 text-white font-semibold rounded-lg cursor-not-allowed">
-          Registration Closed
-        </button>
-      </div>
+      <span>Submission Closing in:</span>
+<div class="flex flex-wrap items-center gap-4 mt-8">
+   <!-- Styled Registration Closed Button -->
+  <div class="relative inline-block">
+    <button class="px-9 py-5 bg-white/15
+ bg-opacity-20 backdrop-blur-md text-white font-semibold cursor-not-allowed">
+      00d 00h 00m 00s
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+  </div>
+
+  <!-- Styled Registration Closed Button -->
+  <div class="relative inline-block">
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold cursor-not-allowed"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Registration Closed
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+  </div>
+</div>
     </div>
     <div class="w-full md:w-1/2">
       <img src="https://h2svision.github.io/publicAssets/bah2025/middle-img-new.png" alt="Hackathon Visual" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
   </div>
 </section>
+<section class="why-participate py-20 px-6 bg-black text-black" id="why-participate">
+  <article class="max-w-7xl mx-auto">
+    <!-- Heading -->
+    <p class="text-[#ff9420] text-[28px] mb-5 mt-0 text-center font-semibold uppercase">WHY PARTICIPATE?</p>
 
-
-
-
-<section class="bg-black text-white py-20 px-6">
-   <div class="flex justify-center items-center min-h-screen gap-4 px-4">
-    <!-- Left Text Blocks -->
-    <div class="flex flex-col justify-between gap-16">
-      <!-- Block 1 -->
-      <div class="bg-orange-500 p-8 w-[400px] relative">
-        <h2 class="text-xl font-bold text-center">Learn from the Experts</h2>
-        <p class="text-center mt-2">Gain mentorship from ISRO scientists, researchers, and space technology experts who will guide you throughout the hackathon journey.</p>
-        <div class="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+    <!-- Inner Flex Section -->
+    <div class="why-inner flex flex-col lg:flex-row items-center justify-between gap-10">
+      
+      <!-- Left Box -->
+      <div class="left-box flex flex-col max-w-[390px] gap-6">
+        <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
+          <h3 class="text-xl font-extrabold mb-2">Learn from the Experts</h3>
+          <span>
+            Gain mentorship from ISRO scientists, researchers, and space technology experts who will guide you throughout the hackathon journey.
+          </span>
+        </div>
+        <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
+          <h3 class="text-xl font-extrabold mb-2">Network & Collaborate</h3>
+          <span>
+            Connect with fellow innovators, researchers, and leaders from academia, industry, and the space community.
+          </span>
+        </div>
       </div>
-      <!-- Block 2 -->
-      <div class="bg-orange-500 p-8 w-[400px] relative">
-        <h2 class="text-xl font-bold text-center">Network & Collaborate</h2>
-        <p class="text-center mt-2">Connect with fellow innovators, researchers, and leaders from academia, industry, and the space community.</p>
-        <div class="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
+
+      <!-- Middle Box with Image -->
+      <div class="middle-box">
+        <img src="https://h2svision.github.io/publicAssets/bah2025/astronote.png" class="max-w-[500px] w-full h-auto block align-middle" />
       </div>
+
+      <!-- Right Box -->
+      <div class="right-box flex flex-col max-w-[390px] gap-6">
+        <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
+          <h3 class="text-xl font-extrabold mb-2">Internship Opportunity with ISRO</h3>
+          <span>
+            Stand a chance to earn an exclusive internship opportunity with ISRO, where you can work alongside leading scientists and engineers on live projects.
+          </span>
+        </div>
+        <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
+          <h3 class="text-xl font-extrabold mb-2">National-Level Recognition</h3>
+          <span>
+            Showcase your talent on a prestigious national platform and earn recognition that can boost your academic and professional journey.
+          </span>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Center Astronaut -->
-    <div class="relative z-10">
-      <img src="https://h2svision.github.io/publicAssets/bah2025/astronote.png" alt="Astronaut" class="h-[500px] object-contain" />
-    </div>
-
-    <!-- Right Text Blocks -->
-    <div class="flex flex-col justify-between gap-16">
-      <!-- Block 1 -->
-      <div class="bg-orange-500 p-8 w-[400px] relative">
-        <div class="absolute top-1/2 left-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
-        <h2 class="text-xl font-bold text-center">Internship Opportunity with ISRO</h2>
-        <p class="text-center mt-2">Stand a chance to earn an exclusive internship opportunity with ISRO, where you can work alongside leading scientists and engineers on live projects.</p>
-      </div>
-      <!-- Block 2 -->
-      <div class="bg-orange-500 p-8 w-[400px] relative">
-        <div class="absolute top-1/2 left-[-20px] transform -translate-y-1/2 w-10 h-10 bg-black"></div>
-        <h2 class="text-xl font-bold text-center">National-Level Recognition</h2>
-        <p class="text-center mt-2">Showcase your talent on a prestigious national platform and earn recognition that can boost your academic and professional journey.</p>
-      </div>
-    </div>
-  </div>
+  </article>
 </section>
-<section class="bg-gradient-to-b from-black to-[#1a0d00] text-white py-16 px-4">
+
+<section class="bg-[url('https://h2svision.github.io/publicAssets/bah2025/how-bg.jpg')] text-white py-16 px-4">
   <h2 class="text-center text-3xl sm:text-4xl font-semibold text-orange-500 mb-16">
     HOW TO PARTICIPATE?
   </h2>
@@ -326,6 +384,897 @@
     </div>
   </div>
 </section>
+<section class="bg-black text-white py-16 px-4">
+  <h2 class="text-center text-3xl sm:text-4xl  text-orange-500 mb-16">
+    CHALLENGES
+  </h2>
+
+  <div class="max-w-7xl mx-auto space-y-12">
+
+    <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">01</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_1.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+        Simulation/Modelling of Forest Fire Spread using AI/ML techniques
+      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+
+   <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">02</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_2.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+        AI-based Help bot for information retrieval out of a knowledge graph created based on static/dynamic content at a web portal.
+      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">03</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_13.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Monitoring Air Pollution from Space using Satellite Observations, Ground-Based Measurements, Reanalysis Data, and AI/ML Techniques
+      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+   <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">04</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_3.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Designing a chain of thought based LLM system for solving complex spatial analysis tasks through intelligent geoprocessing orchestration.
+      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">05</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_4.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Chase the Cloud: Leveraging Diffusion Models for Cloud Motion Prediction using INSAT-3DR/3DS Imagery.
+      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <!-- Top & Bottom Brackets -->
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <!-- Arrow Icon -->
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <!-- Index -->
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">06</span>
+    </div>
+
+    <!-- Static Image (partially visible at start) -->
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_5.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <!-- Text and Button -->
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+AI/ML-driven automated feature detection and change analysis of glacial lakes, road networks, and urban drainage systems from multi-source satellite imagery.      </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <!-- Left & Right Borders -->
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">07</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_6.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Developing an Algorithm for Air Quality Visualizer and Forecast App to generate granular, real-time, and predictive air quality information, especially in smaller cities or rural areas.     </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">08</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_7.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Novel Approaches for Optimizing Deep Learning in Earth Observation with Imbalanced Data.     </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">09</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_8.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Developing an AI/ML-based algorithm for identifying tropical cloud clusters using half-hourly satellite data from the INSAT.     </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">10</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_9.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Identifying halo CME events based on particle data from SWIS-ASPEX payload onboard Aditya-L1     </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">11</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_10.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Novel method to detect landslides & boulders on the Moon: Using Chandrayaan images  </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">12</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_11.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Dual image super resolution for high-resolution optical satellite imagery and its Blind Evaluation   </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">13</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_12.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+Generation of High-resolution Lunar Digital Elevation Model from Lunar Images using Photoclinometry (Shape from Shading).   </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+<div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
+  <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
+
+    <div class="text-white text-lg font-mono relative w-16 pt-2">
+      <span class="absolute left-0 top-0 text-white text-2xl">[</span>
+      <span class="block pl-5 text-blue-400">14</span>
+    </div>
+
+    <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
+      <img
+        src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_14.png"
+        alt="Forest Fire"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div class="flex-1 pt-2">
+      <div class="text-lg mb-2">
+
+Robust Change Detection, Monitoring, and Alert System on user-defined AOI using Multi-Temporal LISS-4 Satellite Imagery.    </div>
+      <div class="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+      <div class="relative inline-block">
+        <a
+    href="https://vision.hack2skill.com/event/bah2025?psNumber=ps1&scrollY=-100&utm_source=hack2skill&utm_medium=homepage"
+    target="_blank"
+    class="relative inline-block"
+  >
+    <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold"
+     style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
+      Learn More
+    </button>
+
+    <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
+    <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
+
+    <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
+    <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
+    </a>
+  </div>
+  </div>
+    </div>
+
+    <div class="text-2xl text-white/70 pt-2">&#8599;</div>
+  </div>
+</div>
+  </section>
+<section class="relative bg-black text-white py-20 px-4 sm:px-10">
+  <div class="absolute inset-0">
+    <img src="https://h2svision.github.io/publicAssets/bah2025/earthbg.png" alt="Background" class="w-full h-full object-cover opacity-40" />
+    <div class="absolute inset-0 bg-black/60"></div> <!-- dark overlay -->
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-semibold text-orange-500 mb-12">
+      REWARDS AND BENEFITS
+    </h2>
+
+    <div class="flex flex-col md:flex-row items-center justify-start gap-8">
+      <div class="w-[300px] h-[200px] bg-white/10 backdrop-blur-md border border-orange-500 rounded-md p-6 text-left">
+        <h3 class="text-xl font-semibold text-orange-500 mb-4">
+          Recognition and Internship Opportunities
+        </h3>
+        <p class="text-white/90 text-base">
+          Recognition by ISRO and the chance to grab an internship at ISRO.
+        </p>
+      </div>
+
+      <div class="w-[300px] h-[200px] bg-white/10 backdrop-blur-md border border-orange-500 rounded-md p-6 text-left">
+        <h3 class="text-xl font-semibold text-orange-500 mb-4">
+          Mentorship from ISRO Experts
+        </h3>
+        <p class="text-white/90 text-base">
+          Gain invaluable insights and guidance from leading scientists and engineers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    let currentIndex = 0;
+    const timelineInner = document.getElementById('timelineInner');
+    const itemWidth = 312; 
+
+    function scrollTimeline(direction) {
+      const itemsCount = timelineInner.children.length;
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > itemsCount - 1) currentIndex = itemsCount - 1;
+
+      const offset = itemWidth * currentIndex;
+      timelineInner.style.transform = `translateX(-${offset}px)`;
+    }
+  </script>
+
+  <section class="px-8 py-16 bg-black text-white">
+  <h2 class="text-3xl font-semibold mb-10 text-left text-[#FF9420]">CONTACT US</h2>
+
+  <div class="flex flex-col md:flex-row gap-6">
+    <div class="rounded-lg px-8 py-10 md:w-[45%] shadow-md" style="background-color: #FF9420; background-color: rgba(255, 148, 32, 0.9);">
+      <h3 class="text-3xl font-bold mb-6">Email Us</h3>
+      <p class="mb-3 text-lg">
+        For any inquiries, please reach out to us at
+      </p>
+      <p class="underline text-black font-medium text-lg mb-4">
+        isrobah2025support@hack2skill.com
+      </p>
+      <p class="text-lg">We would love to assist you!</p>
+    </div>
+
+    <div class="rounded-lg px-8 py-10 md:w-[45%] shadow-md" style="background-color: #FF9420; background-color: rgba(255, 148, 32, 0.9);">
+      <h3 class="text-3xl font-bold mb-6">Join on Discord</h3>
+      <p class="mb-3 text-lg">
+        To stay up-to-date with communication and announcements, join our Discord server.
+      </p>
+      <p class="underline text-black font-medium text-lg">
+        Click here to join the Discord server
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 md:px-20 py-16 bg-black text-white">
+  <h2 class="text-[#FF9420] text-lg md:text-2xl font-semibold text-center mb-12 tracking-wide">
+  FREQUENTLY ASKED QUESTION
+</h2>
+
+
+
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#264B63] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">01</div>
+      <p class="text-[#2FB1EC] font-medium text-base md:text-lg leading-snug">
+        Who can participate in the Bharatiya Antariksh Hackathon 2025?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        Undergraduate Students, Graduate/Postgraduate Students, PhD Students, and Research Scholars in India can participate.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#5B320C] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">02</div>
+      <p class="text-[#FF9420] font-medium text-base md:text-lg leading-snug">
+        What should be the ideal team size?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        Each team shall consist of 3 to 4 members. Members can be from different colleges/universities.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#264B63] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">03</div>
+      <p class="text-[#2FB1EC] font-medium text-base md:text-lg leading-snug">
+        What is the cost of participating in Bharatiya Antariksh Hackathon 2025?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        There is no participation fee at any stage of the hackathon.
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#264B63] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">04</div>
+      <p class="text-[#2FB1EC] font-medium text-base md:text-lg leading-snug">
+        What is the cost of participating in Bharatiya Antariksh Hackathon 2025?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        There is no participation fee at any stage of the hackathon.
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#264B63] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">05</div>
+      <p class="text-[#2FB1EC] font-medium text-base md:text-lg leading-snug">
+        What is the cost of participating in Bharatiya Antariksh Hackathon 2025?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        There is no participation fee at any stage of the hackathon.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-500 py-6 flex items-start gap-6 md:gap-12">
+    <div class="flex items-start gap-4 w-1/2">
+      <div class="bg-[#5B320C] text-white w-10 h-10 flex items-center justify-center font-semibold text-sm mt-1">06</div>
+      <p class="text-[#FF9420] font-medium text-base md:text-lg leading-snug">
+        Do I need prior space research experience to participate?
+      </p>
+    </div>
+    <div class="w-1/2">
+      <p class="text-white text-sm md:text-base leading-relaxed">
+        No. While domain knowledge is helpful, the hackathon is open to all eligible students passionate about solving real-world challenges in space technology.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-500 mt-6"></div>
+</section>
+<footer class="relative text-white">
+  <div
+  class="bg-cover bg-center bg-no-repeat min-h-[400px] flex items-end justify-center filter brightness-[0.3]"
+  style="background-image: url('https://h2svision.github.io/publicAssets/bah2025/bottombg.png');">
+    <div class="px-4 sm:px-6 lg:px-8 text-center pb-10">
+      <h2 class="text-sm tracking-wide font-medium text-white uppercase opacity-70">Frequently Asked Questions</h2>
+    </div>
+  </div>
+
+<div class="bg-[#FF9420] py-4 px-4 flex items-center justify-center space-x-3">
+  <span class="text-black text-lg font-medium">Powered by</span>
+  <img src="https://h2svision.github.io/publicAssets/vision/H2S_White_Logo.png" alt="H2S Logo" class="h-6 md:h-7 lg:h-8">
+</div>
+
+</footer>
 
   <script>
     const menu = document.getElementById('mobileMenu');
@@ -343,3 +1292,6 @@
 
 </body>
 </html>
+
+
+
