@@ -35,7 +35,6 @@
   right: 0;
   background:url("https://h2svision.github.io/publicAssets/bah2025/about-right-img.png") no-repeat;
 }
-/* Common block style */
 .info-box::before,
 .info-box::after {
   content: "";
@@ -45,14 +44,12 @@
   height: 86px;
 }
 
-/* Black small block */
 .info-box::before {
   width: 30px;
   background: #000;
   right: 0;
 }
 
-/* Orange long block */
 .info-box::after {
   width: 137px;
   background: #ff9420;
@@ -79,11 +76,6 @@
 
   <section class="relative w-full h-screen">
 <div class="fixed top-0 left-1/2 transform -translate-x-1/2 z-[1000] bg-white rounded-full flex justify-center items-center w-full max-w-max mx-auto px-8 py-6">
-  <div class="menu-toggle flex items-center">
-    <div class="hamburger cursor-pointer text-2xl">☰</div>
-    <div class="closemenu hidden text-3xl">×</div>
-  </div>
-
   <nav>
   <ul class="flex gap-6 items-center text-[16px] no-underline text-black">
     <li><a href="#about" class="hover:text-blue-600">About</a></li>
@@ -93,10 +85,9 @@
     <li><a href="#rewards" class="hover:text-blue-600">Rewards</a></li>
     <li><a href="#faqs" class="hover:text-blue-600">FAQs</a></li>
 
-    <!-- Signin / Registration Closed Button -->
     <li class="signin">
-      <a href="/event/bah2025/registration/"
-         class="bg-black text-white px-6 py-3 rounded-full font-medium cursor-not-allowed">
+      <a href="https://vision.hack2skill.com/login?utm_source=hack2skill&utm_medium=homepage"
+         class="bg-black text-white px-6 py-3 rounded-full font-medium cursor-notwed">
         Registration Closed
       </a>
     </li>
@@ -105,30 +96,13 @@
 
 </div>
 
-
-    <!-- Mobile Slide-In Menu -->
-    <div id="mobileMenu" class="fixed top-0 left-0 h-full w-[100%] bg-black transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col items-start px-10 py-20 z-40">
-      <nav class="text-white text-xl space-y-6 mx-auto w-full text-center">
-        <a href="#" class="block hover:text-blue-500">About</a>
-        <a href="#" class="block hover:text-blue-500">Why Participate?</a>
-        <a href="#" class="block hover:text-blue-500">Challenges</a>
-        <a href="#" class="block hover:text-blue-500">Schedules</a>
-        <a href="#" class="block hover:text-blue-500">Rewards</a>
-        <a href="#" class="block hover:text-blue-500">FAQs</a>
-        <button class="mt-6 bg-white text-black px-6 py-2 rounded-full font-bold">Registration Closed</button>
-      </nav>
-    </div>
-
-    <!-- Video Background -->
     <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
       <source src="https://h2svision.github.io/publicAssets/bah2025/hero-video-deskop.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
-    <!-- Hero Content -->
     <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-30 py-20">
       <h1 class="text-5xl md:text-5xl font-bold leading-tight">
          <img src="https://h2svision.github.io/publicAssets/bah2025/main_title.png"
@@ -153,7 +127,6 @@
 </a>
   </div>
   </section>
-<!-- Info Section (Based on Provided Image) -->
 <section class="relative bg-black text-white py-20 px-6 about-section">
   <div class="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto">
       <div class="text-center md:max-w-3xl px-4">
@@ -175,29 +148,23 @@
 
   </div>
 </section>
-<!-- Who Can Participate Section -->
 <section class="bg-black text-white py-20 px-6">
   <div class="max-w-6xl mx-auto text-center">
 
-    <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-semibold mb-12">
       <span class="text-[#ff9420] ">WHO CAN PARTICIPATE?</span>
     </h2>
 
-    <!-- Participant Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-10">
       
-      <!-- Card 1 -->
       <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
         <p class="text-lg font-medium">Undergraduate<br>Students</p>
       </div>
 
-      <!-- Card 2 -->
       <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
         <p class="text-lg font-medium">Graduate/<br>Postgraduate Students</p>
       </div>
 
-      <!-- Card 3 -->
       <div class="bg-[#1e1e1e] border border-white rounded-2xl w-full max-w-sm py-12 px-6">
         <p class="text-lg font-medium">PhD Students/<br>Research Scholars</p>
       </div>
@@ -213,7 +180,6 @@
 
 <section class="bg-black text-white px-6 py-20">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <!-- Right Side: Text + Countdown + Button -->
     <div class="w-full md:w-1/2">
       <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
         What is the <br /> Bharatiya Antariksh Hackathon?
@@ -230,36 +196,30 @@
 
       <span>Submission Closing in:</span>
 <div class="flex flex-wrap items-center gap-4 mt-8">
-   <!-- Styled Registration Closed Button -->
   <div class="relative inline-block">
     <button class="px-9 py-5 bg-white/15
  bg-opacity-20 backdrop-blur-md text-white font-semibold cursor-not-allowed">
       00d 00h 00m 00s
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 right-0 w-8 h-[2px] bg-white"></span>
   </div>
 
-  <!-- Styled Registration Closed Button -->
   <div class="relative inline-block">
     <button class="px-9 py-5 bg-opacity-20 backdrop-blur-md text-white font-semibold cursor-not-allowed"
      style="background: linear-gradient(125deg, rgba(255, 132, 0, 0.5) 0%, rgba(160, 145, 91, 0.5) 50%, rgba(0, 168, 243, 0.5) 100%);">
       Registration Closed
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -274,13 +234,10 @@
 </section>
 <section class="why-participate py-20 px-6 bg-black text-black" id="why-participate">
   <article class="max-w-7xl mx-auto">
-    <!-- Heading -->
     <p class="text-[#ff9420] text-[28px] mb-5 mt-0 text-center font-semibold uppercase">WHY PARTICIPATE?</p>
 
-    <!-- Inner Flex Section -->
     <div class="why-inner flex flex-col lg:flex-row items-center justify-between gap-10">
       
-      <!-- Left Box -->
       <div class="left-box flex flex-col max-w-[390px] gap-6">
         <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
           <h3 class="text-xl font-extrabold mb-2">Learn from the Experts</h3>
@@ -296,12 +253,10 @@
         </div>
       </div>
 
-      <!-- Middle Box with Image -->
       <div class="middle-box">
         <img src="https://h2svision.github.io/publicAssets/bah2025/astronote.png" class="max-w-[500px] w-full h-auto block align-middle" />
       </div>
 
-      <!-- Right Box -->
       <div class="right-box flex flex-col max-w-[390px] gap-6">
         <div class="info-box relative text-right bg-[#ff9420] text-black px-4 py-12 pr-16">
           <h3 class="text-xl font-extrabold mb-2">Internship Opportunity with ISRO</h3>
@@ -328,7 +283,6 @@
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
     
-    <!-- Step 1 -->
     <div>
       <div class="mx-auto mb-4 bg-[#47290f] rounded-md w-20 h-20 flex items-center justify-center">
         <img src="https://h2svision.github.io/publicAssets/bah2025/edit.svg" class="w-10 h-10" />
@@ -339,7 +293,6 @@
       </p>
     </div>
 
-    <!-- Step 2 -->
     <div>
       <div class="mx-auto mb-4 bg-[#47290f] rounded-md w-20 h-20 flex items-center justify-center">
         <img src="https://h2svision.github.io/publicAssets/bah2025/groun-ivon.svg" class="w-10 h-10" />
@@ -350,7 +303,6 @@
       </p>
     </div>
 
-    <!-- Step 3 -->
     <div>
       <div class="mx-auto mb-4 bg-[#47290f] rounded-md w-20 h-20 flex items-center justify-center">
         <img src="https://h2svision.github.io/publicAssets/bah2025/mountain-icon.svg" class="w-10 h-10" />
@@ -361,7 +313,6 @@
       </p>
     </div>
 
-    <!-- Step 4 -->
     <div>
       <div class="mx-auto mb-4 bg-[#47290f] rounded-md w-20 h-20 flex items-center justify-center">
         <img src="https://h2svision.github.io/publicAssets/bah2025/shuttle.svg" class="w-10 h-10" />
@@ -372,7 +323,6 @@
       </p>
     </div>
 
-    <!-- Step 5 -->
     <div>
       <div class="mx-auto mb-4 bg-[#47290f] rounded-md w-20 h-20 flex items-center justify-center">
         <img src="https://h2svision.github.io/publicAssets/bah2025/idea.svg" class="w-10 h-10" />
@@ -394,13 +344,11 @@
     <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">01</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_1.png"
@@ -409,7 +357,6 @@
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
         Simulation/Modelling of Forest Fire Spread using AI/ML techniques
@@ -427,11 +374,9 @@
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -441,7 +386,6 @@
   </div>
     </div>
 
-    <!-- Arrow Icon -->
     <div class="text-2xl text-white/70 pt-2">&#8599;</div>
   </div>
 </div>
@@ -449,13 +393,11 @@
    <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">02</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_2.png"
@@ -464,7 +406,6 @@
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
         AI-based Help bot for information retrieval out of a knowledge graph created based on static/dynamic content at a web portal.
@@ -482,11 +423,9 @@
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -496,20 +435,17 @@
   </div>
     </div>
 
-    <!-- Arrow Icon -->
     <div class="text-2xl text-white/70 pt-2">&#8599;</div>
   </div>
 </div>
 <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">03</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_13.png"
@@ -518,7 +454,6 @@
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
 Monitoring Air Pollution from Space using Satellite Observations, Ground-Based Measurements, Reanalysis Data, and AI/ML Techniques
@@ -536,11 +471,9 @@ Monitoring Air Pollution from Space using Satellite Observations, Ground-Based M
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -550,20 +483,17 @@ Monitoring Air Pollution from Space using Satellite Observations, Ground-Based M
   </div>
     </div>
 
-    <!-- Arrow Icon -->
     <div class="text-2xl text-white/70 pt-2">&#8599;</div>
   </div>
 </div>
    <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">04</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_3.png"
@@ -572,7 +502,6 @@ Monitoring Air Pollution from Space using Satellite Observations, Ground-Based M
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
 Designing a chain of thought based LLM system for solving complex spatial analysis tasks through intelligent geoprocessing orchestration.
@@ -590,11 +519,9 @@ Designing a chain of thought based LLM system for solving complex spatial analys
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -604,20 +531,17 @@ Designing a chain of thought based LLM system for solving complex spatial analys
   </div>
     </div>
 
-    <!-- Arrow Icon -->
     <div class="text-2xl text-white/70 pt-2">&#8599;</div>
   </div>
 </div>
 <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">05</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_4.png"
@@ -626,7 +550,6 @@ Designing a chain of thought based LLM system for solving complex spatial analys
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
 Chase the Cloud: Leveraging Diffusion Models for Cloud Motion Prediction using INSAT-3DR/3DS Imagery.
@@ -644,11 +567,9 @@ Chase the Cloud: Leveraging Diffusion Models for Cloud Motion Prediction using I
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
-    <!-- Top & Bottom Brackets -->
     <span class="absolute top-0 left-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute top-0 right-0 w-8 h-[2px] bg-white"></span>
     <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-white"></span>
@@ -658,20 +579,17 @@ Chase the Cloud: Leveraging Diffusion Models for Cloud Motion Prediction using I
   </div>
     </div>
 
-    <!-- Arrow Icon -->
     <div class="text-2xl text-white/70 pt-2">&#8599;</div>
   </div>
 </div>
 <div class="group border-b border-white/20 overflow-hidden transition-all duration-500">
   <div class="flex items-start gap-6 transition-all duration-500 group-hover:h-48 h-24">
 
-    <!-- Index -->
     <div class="text-white text-lg font-mono relative w-16 pt-2">
       <span class="absolute left-0 top-0 text-white text-2xl">[</span>
       <span class="block pl-5 text-blue-400">06</span>
     </div>
 
-    <!-- Static Image (partially visible at start) -->
     <div class="w-64 h-40 rounded shadow-lg overflow-hidden">
       <img
         src="https://h2svision.github.io/publicAssets/bah2025/ps_Images/ps_5.png"
@@ -680,7 +598,6 @@ Chase the Cloud: Leveraging Diffusion Models for Cloud Motion Prediction using I
       />
     </div>
 
-    <!-- Text and Button -->
     <div class="flex-1 pt-2">
       <div class="text-lg mb-2">
 AI/ML-driven automated feature detection and change analysis of glacial lakes, road networks, and urban drainage systems from multi-source satellite imagery.      </div>
@@ -697,7 +614,6 @@ AI/ML-driven automated feature detection and change analysis of glacial lakes, r
       Learn More
     </button>
 
-    <!-- Left & Right Borders -->
     <span class="absolute top-0 left-0 w-[2px] h-full bg-white"></span>
     <span class="absolute top-0 right-0 w-[2px] h-full bg-white"></span>
 
@@ -1276,19 +1192,6 @@ Robust Change Detection, Monitoring, and Alert System on user-defined AOI using 
 
 </footer>
 
-  <script>
-    const menu = document.getElementById('mobileMenu');
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const openIcon = document.getElementById('hamburgerOpenIcon');
-    const closeIcon = document.getElementById('hamburgerCloseIcon');
-
-    hamburgerBtn.addEventListener('click', () => {
-      const isOpen = menu.classList.contains('-translate-x-full');
-      menu.classList.toggle('-translate-x-full');
-      openIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  </script>
 
 </body>
 </html>
